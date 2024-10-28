@@ -23,9 +23,10 @@ git push -uf origin main
 ## Installation
 Steps to install and run this application
 
-1. navigate to rest-api-svc folder after git clone.
-2.run command "npm install".
-3. to run this application run command "npm start".
+1. Navigate to rest-api-svc folder after git clone.
+2. Run command "npm install".
+3. To run this application run command "npm start".
+
  
 
 ## Usage
