@@ -1,0 +1,19 @@
+{
+  "name": "rest-api-svc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "dipabh",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "isomorphic-dompurify": "^2.16.0",
+    "nanoid": "^5.0.7",
+    "node-localstorage": "^3.0.5"
+  }
+}
