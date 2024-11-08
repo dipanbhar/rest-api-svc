@@ -1,0 +1,71 @@
+openapi: 3.0.0
+info:
+  title: RESTAPI
+  description: This document will provide a list of APIs.
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000/
+    description: Local dev server
+  - url: https://server.com/
+    description: Prod server
+paths:
+  /svc/todo/getAll:
+    get:
+      summary: Returns all the todo task.
+      description: list todo in sorted order based on prority.
+      responses:
+        '200':    # status code
+          description: Version info JSON
+          content:
+            application/json:
+              schema: 
+                type: object
+                properties:
+                  version:
+                    type: string
+  /svc/todo/deleteTodo/:id:
+    delete:
+      summary: Delete a todo based on id
+      description: Endpoint to delete a todo based on Id.
+      responses:
+        '200':    # status code
+          description: Version info JSON
+          content:
+            application/json:
+              schema: 
+                type: object
+                properties:
+                  version:
+                    type: string  
+  /svc/todo/deleteAllTodo:
+    delete:
+      summary: Delete all todos
+      description: Endpoint to delete all todos.
+      responses:
+        '200':    # status code
+          description: Version info JSON
+          content:
+            application/json:
+              schema: 
+                type: object
+                properties:
+                  version:
+                    type: string
+  /svc/todo/saveTodo:
+    post:
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                priority:
+                  type: string
+                  minLength: 1
+                title:
+                  type: string
+                  minLength: 1
+      responses:
+        '201':
+          description: Successfully created                                              
